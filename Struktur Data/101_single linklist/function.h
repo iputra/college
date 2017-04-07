@@ -23,7 +23,7 @@ llist addBelakang(llist L, int i, char n[]) {
         L.head = L.tail = nn;
     else {
         L.tail->next = nn;
-        L.tail == nn;
+        L.tail = nn;
     }
 return L;
 }
@@ -46,11 +46,30 @@ void cetak(llist L) {
     nn = L.head;
 
     while(nn != NULL) {
-        printf("[%d] %s --> ",nn->id
-                            ,nn->nama);
+        printf("[%d] %s --> ",nn->id,nn->nama);
         nn = nn->next;
     }
     printf("|");
 }
 
-llist 
+llist sisipUrut(llist L, int i, char n[]) {
+    node *nn,*pb1,*pb2;
+    nn = buatNode(i,n);
+
+    if(L.head == NULL)
+        L.head = L.tail = nn;
+    else{
+        if(i<=L.head->id) L = addDepan(L,i,n);
+        else if(i>L.head->id) L = addBelakang(L,i,n);
+        else {
+            pb1 = pb2 = L.head;
+            while(pb1->id<i) {
+                pb2 = pb1;
+                pb1 = pb1->next;
+            }
+            nn->next = pb1;
+            pb2->next = nn;
+        }
+    }
+return L;
+}

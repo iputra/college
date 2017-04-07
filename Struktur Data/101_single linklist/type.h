@@ -11,5 +11,5 @@ struct linklist{
     node *tail;
 };
 
-typedef linklist llist;
+typedef struct linklist llist;
 
