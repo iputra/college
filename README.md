@@ -1,4 +1,4 @@
-# My repository since in  college
+# My repository for college
 
 This repository contain :
 - Data Structure
