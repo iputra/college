@@ -1,4 +1,4 @@
-# my repository in college
+# My repository in college
 
 This repository contain :
 - Data Structure
@@ -7,3 +7,5 @@ This repository contain :
 - Analog Electronics
 - Basic Network
 - Operating System Microcomputer
+
+`~ ip`
