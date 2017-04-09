@@ -57,13 +57,12 @@ void cetakLL(stack L){
      int i;
      pnlsr=L.top;
      printf("\nKONDISI STACK SAAT INI\n\n");
-     for(i=1;i<=L.kapasitas-L.bbsi;i++) printf(" |                |\n");
+     for(i=1;i<=L.kapasitas-L.bbsi;i++)
+        printf(" |                |\n");
      while(pnlsr!=NULL){
-       printf(" |(%3d,%10s)|",pnlsr->id,
-                           pnlsr->namaBuah);
+       printf(" |(%3d,%10s)|",pnlsr->id,pnlsr->namaBuah);
        if(pnlsr==L.top) printf("<---TOP");
-       
-       printf("\n");                        
+        printf("\n");                        
        pnlsr=pnlsr->next;                                   
        }
        printf("  ----------------\n");                    
@@ -96,6 +95,7 @@ int main(){
    P1=push(P1,400,"Durian");
    cetakLL(P1);
    P1=pop(P1,&idHasil,buahHasil);printf("\nHasil Pop: %d,%s\n",idHasil,buahHasil);
+   cetakLL(P1);
    P1=pop(P1,&idHasil,buahHasil);printf("\nHasil Pop: %d,%s\n",idHasil,buahHasil);
    P1=pop(P1,&idHasil,buahHasil);printf("\nHasil Pop: %d,%s\n",idHasil,buahHasil);
    P1=pop(P1,&idHasil,buahHasil);printf("\nHasil Pop: %d,%s\n",idHasil,buahHasil);
