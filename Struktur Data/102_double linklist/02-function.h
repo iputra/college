@@ -85,7 +85,7 @@ llist sisipNode(llist L, int pos, int i, char n[]) {
     else {
         nn = buatNode(i,n);
         pb = L.head;
-        while(j <= pos-2)
+        while(pb != NULL && j <= pos-2)
             pb = pb->next;
         if(pb->next != NULL) {
             pb->next->prev = nn;
@@ -138,7 +138,7 @@ llist delKe(llist L, int pos) {
         L = delDepan(L);
     else {
         pb = L.head;
-        while(pb != NULL && j <= pos-1)
+        while(pb != NULL && j < pos-1)
             pb = pb->next;
         if(pb == NULL) {
             printf("Tidak ada node di posisi %d",pos);
