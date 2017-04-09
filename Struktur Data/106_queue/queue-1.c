@@ -12,8 +12,8 @@ typedef struct node node;
 struct queue{
     node *depan; //head
     node *belakang; //buntut
-	int kapasitas; //berapa banyak benda yang bisa diisi
-	int bbya; //banyak benda yang antri   
+    int kapasitas; //berapa banyak benda yang bisa diisi
+    int size; //banyak benda yang antri   
     };    
 typedef struct queue queue; 
 
